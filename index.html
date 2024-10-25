@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código de Inferencia Lógica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Código de Inferencia Lógica</h1>
+    <pre><code>
+rain = False         # True si llueve, False si no
+bbc = False          # True si los estudiantes visitaron BBC
+unimayor = True      # True si los estudiantes visitaron Unimayor
+
+# Conocimiento:
+# Si no llueve, los estudiantes visitan BBC
+if not rain:
+    bbc = True
+
+# Los estudiantes visitaron BBC o Unimayor pero no ambos (XOR)
+bbc_unimayor = (bbc or unimayor) and not (bbc and unimayor)
+
+# Los estudiantes visitaron Unimayor
+unimayor = True  # Afirmación directa
+
+# Inferencia sobre BBC y el clima
+print("¿Los estudiantes visitaron BBC?", bbc)
+print("¿Llovió?", rain)
+    </code></pre>
+</body>
+</html>
